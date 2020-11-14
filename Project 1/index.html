@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zesty Pizzeria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="pizza.css">
+
+</head>
+
+<h1>Zesty Pizzeria</h1>
+
+<body id="page">
+<div class="container">
+    <nav>
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home">Place Order</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#info">Delivery Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#confirm">Confirmation</a>
+            </li>
+
+
+        </ul>
+    </nav>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane active">
+
+
+            <fieldset>
+            <legend>Size</legend>
+
+                <input type="radio" name="size" id="size-small" data-crust="7" value="Small"><label for="size-small" >Small ($7)</label>
+                <br>
+
+                <input type="radio" name="size" id="size-medium" data-crust="9" value="Medium"><label for="size-medium">Medium ($9)</label>
+                <br>
+
+                <input type="radio" name="size" id="size-large" data-crust="12" value="Large"><label for="size-large">Large ($12)</label>
+                <br>
+
+            </fieldset>
+
+
+            <fieldset>
+            <legend>Crust</legend>
+
+                <input type="radio" name="crust" id="crust-pan" value="Pan"><label for="crust-pan" >Pan</label>
+                <br>
+
+                <input type="radio" name="crust" id="crust-thin" value="Thin"><label for="crust-thin">Thin Crust</label>
+                <br>
+
+                <input type="radio" name="crust" id="crust-gluten" value="Gluten Free"><label for="crust-gluten" >Gluten Free</label>
+                <br>
+
+            </fieldset>
+
+
+
+            <fieldset>
+
+                <legend>Meat Toppings ($1.50/ea)</legend>
+
+
+                <input type="checkbox" name="meatTopping" id="pepperoni" value="   Pepperoni  " data-price="1.50"><label for="pepperoni">Pepperoni</label>
+                <br>
+
+                <input type="checkbox" name="meatTopping" id="sausage" value=" Sausage  " data-price="1.50"><label for="sausage">Sausage</label>
+                <br>
+
+                <input type="checkbox" name="meatTopping" id="beef" value="  Beef   " data-price="1.50"><label for="beef">Beef</label>
+                <br>
+
+                <input type="checkbox" name="meatTopping" id="ham" value="   Ham   " data-price="1.50"><label for="ham">Ham</label>
+                <br>
+
+            </fieldset>
+
+
+
+            <fieldset>
+
+                <legend>Vegetable toppings ($1.00/ea)</legend>
+
+
+
+                <input type="checkbox" name="topping" id="mushrooms" value="  Mushrooms  " data-price="1"><label for="mushrooms">Mushrooms</label>
+                <br>
+
+                <input type="checkbox" name="topping" id="blackolives" value="  Black olives   " data-price="1"><label for="blackolives">Black Olives</label>
+                <br>
+
+                <input type="checkbox" name="topping" id="tomatoes" value="  Tomatoes  " data-price="1"><label for="tomatoes">Tomatoes</label>
+                <br>
+
+                <input type="checkbox" name="topping" id="greenPeppers" value="  Green peppers   " data-price="1"><label for="greenPeppers">Green Peppers</label>
+                <br>
+
+
+            </fieldset>
+
+
+        </div>
+
+        <div id="info" class="tab-pane">
+
+
+
+            <h2>Delivery Information</h2>
+                <div class="deliveryInfo">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" class="deliveryInfo">
+                </div>
+
+                <div class="deliveryInfo">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" class="deliveryInfo">
+                </div>
+
+                <div class="deliveryInfo">
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" class="deliveryInfo">
+                </div>
+                </fieldset>
+
+        </div>
+
+        <div id="confirm" class="tab-pane">
+            <h2>Order Confirmation</h2>
+
+
+
+          <legend>Order Summary</legend>
+            <fieldset>
+            <table>
+
+                <tr>
+                    <td>Size:</td>
+                    <td id="summary"></td>
+                </tr>
+
+                <tr>
+                    <td>Crust:</td>
+                    <td id="crust"></td>
+                </tr>
+                <tr>
+                    <td>Meat toppings:</td>
+                    <td id="meats"></td>
+                </tr>
+                <tr>
+                    <td>Veggie toppings:</td>
+                    <td id="veggies"></td>
+                </tr>
+                <tr>
+                    <td>Delivery Fee:</td>
+                    <td id="fee"></td>
+                </tr>
+
+                <tr>
+                    <td>sales tax:</td>
+                    <td id="salesTax"></td>
+                </tr>
+                <tr>
+                    <td>Grand Total:</td>
+                    <td id="grandTotal"></td>
+                </tr>
+            </table>
+            </fieldset>
+
+
+            <fieldset>
+                <table>
+
+                    <tr>
+                        <td>Full Name:</td>
+                        <td id="confirmName"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Address:</td>
+                        <td id="confirmAddress"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number:</td>
+                        <td id="confirmNumber"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div>
+
+
+
+        </div>
+
+    </div>
+
+    <!-- jQuery first -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- Popper and Bootstrap second -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Our code last -->
+    <script src="zesty.js"></script>
+
+
+
+</div>
+
+</body>
+
+</html>
